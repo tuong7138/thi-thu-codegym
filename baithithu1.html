@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    //bai tap 1
+    let arr=prompt('nhap it nhat 5 phan tu ngan cach bang dau ","').split(',');
+    
+    // if(arr.length<5){
+    //     arrAo=prompt('nhap lai');
+    // }
+    // else{    document.write('diem trung binh la: '+findAvg(arr));
+    // }
+       while(arr.length<5){
+        arr=prompt('nhap lai').split(',');
+       }
+    function findAvg(arr){
+        let sum=0;
+        let trungBinh=0;
+        for(let i=0;i<arr.length;i++){
+            sum+=arr[i]*1;
+        }
+        trungBinh=sum/arr.length;
+        return trungBinh;
+    }
+    document.write('diem trung binh la: '+findAvg(arr));
+    console.log(arr);
+    //bai tap2
+    function insertNumberToArray(arr){
+        // lay arr[3] la x
+        // lay arr[5] la index
+        if(arr[5]>arr.length||arr[5]<arr.length){
+            return arr;
+        }
+        else{
+            arr[5]=arr[3];
+            return arr;
+        }
+    }
+    document.write('<br>')
+    document.write('mang moi: '+insertNumberToArray(arr));
+    //bai tap3
+    
+    let x=prompt('nhap so x bat ky');
+    function sumOfListPrime(x){
+        let sum=0;
+        for(let i=0;i<=x;i++){
+            sum+=i;
+        }
+        return sum;
+    }
+    document.write('<br>');
+    document.write('tong tu 0 toi '+ x +' la: '+sumOfListPrime(x));
+</script>
