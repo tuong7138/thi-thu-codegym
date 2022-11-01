@@ -34,22 +34,25 @@
     document.write('diem trung binh la: '+findAvg(arr));
     console.log(arr);
     //bai tap2
-    function insertNumberToArray(arr){
-        // lay arr[3] la x
-        // lay arr[5] la index
-        if(arr[5]>arr.length||arr[5]<arr.length){
+
+    let x1=+prompt('nhap so nguyen x bat ky');
+    let index=+prompt('nhap so nguyen index bat ky');
+
+    function insertNumberToArray(arr,x1,index){
+
+        if(arr[index]>arr.length||arr[index]<arr.length){
             return arr;
         }
         else{
-            arr[5]=arr[3];
+            arr[index]=arr[x1];
             return arr;
         }
     }
-    document.write('<br>')
-    document.write('mang moi: '+insertNumberToArray(arr));
+    document.write('<br>');
+    document.write('mang moi: '+insertNumberToArray(arr,x1,index))
     //bai tap3
     
-    let x=prompt('nhap so x bat ky');
+    let x=prompt('nhap so x de tinh tong bat ky');
     function sumOfListPrime(x){
         let sum=0;
         for(let i=0;i<=x;i++){
